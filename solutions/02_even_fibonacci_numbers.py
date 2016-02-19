@@ -7,14 +7,15 @@
 
 #  Bottom-up algorithm with memoization
 def fibonacci(n):
-  memo = {}
-  for x in range(1,n+1):
-    if x <= 2:
-      memo[x] = 1
-    else:
-      memo[x] = memo[x-1] + memo[x-2]
+  memo = [1,1]
 
-  return memo[n]
+  if n > 2:
+    for x in range(3,n+1):
+      f = memo[1] + memo[0]
+      memo[0] = memo[1]
+      memo[1] = f
+
+  return memo[1]
 
 
 def main():
