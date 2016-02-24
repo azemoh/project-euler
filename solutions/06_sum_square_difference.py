@@ -7,10 +7,10 @@ the square of the sum is 3025 - 385 = 2640. Find the difference between the sum 
 of the first one hundred natural numbers and the square of the sum.
 """
 def sum_squares(n):
-  return sum([x**2 for x in range(1,n+1)])
+  return sum(x**2 for x in range(1,n+1))
 
 def squared_sum(n):
-  return sum([x for x in range(1,n+1)]) ** 2
+  return sum(range(1,n+1)) ** 2
 
 def sum_square_difference(num):
   return squared_sum(num) - sum_squares(num)
