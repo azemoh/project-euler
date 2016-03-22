@@ -3,12 +3,16 @@
 # from 1 to 10 without any remainder. What is the smallest positive number
 # that is evenly divisible by all of the numbers from 1 to 20?
 
+from helpers import are_multiples
+
+
 def smallest_multiple():
   i = 2
-  multiple = 0
+  multiple = None
   while True:
     multiple = 20 * i
-    if all(multiple % n == 0 for n in range(1,21)): break
+    if are_multiples(multiple, range(1,21)):
+      break
     i += 1
   return multiple
 

@@ -22,3 +22,15 @@ def is_prime(n):
       return False
 
   return True
+
+
+def are_multiples(n, numbers):
+  """
+  Given a list of integers and an integer n
+  Check if n is divisible by every number in the list
+  """
+  for num in numbers:
+    if n % num != 0:
+      return False
+
+  return True
