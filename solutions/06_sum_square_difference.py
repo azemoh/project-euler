@@ -6,14 +6,12 @@ Hence the difference between the sum of the squares of the first ten natural num
 the square of the sum is 3025 - 385 = 2640. Find the difference between the sum of the squares
 of the first one hundred natural numbers and the square of the sum.
 """
-def sum_squares(n):
-  return sum(x**2 for x in range(1,n+1))
-
-def squared_sum(n):
-  return sum(range(1,n+1)) ** 2
 
 def sum_square_difference(num):
-  return squared_sum(num) - sum_squares(num)
+  sum_squares = sum(i ** 2 for i in range(1, num + 1))
+  squared_sum = sum(range(1, num + 1)) ** 2
+
+  return squared_sum - sum_squares
 
 def main():
   print sum_square_difference(100)

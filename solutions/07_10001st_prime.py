@@ -10,11 +10,11 @@ from helpers import is_prime
 def nth_prime(n):
   num = 1
   prime = 1
-  count = 0
-  while count <= n:
+  prime_count = 0
+  while prime_count <= n:
     if is_prime(num):
       prime = num
-      count += 1
+      prime_count += 1
     num += 2
 
   return prime
@@ -26,4 +26,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-

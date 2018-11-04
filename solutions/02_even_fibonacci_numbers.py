@@ -22,10 +22,8 @@ def main():
   even_sum = 0
   num = 1
   fib = 0
-  while True:
+  while fib < 4000000:
     fib = fibonacci(num)
-
-    if fib >= 4000000: break
 
     if fib % 2 == 0:
       even_sum += fib
